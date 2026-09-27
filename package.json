@@ -1,0 +1,28 @@
+{
+  "name": "project-management-system",
+  "version": "1.0.0",
+  "description": "project management system",
+  "keywords": [
+    "backend",
+    "API",
+    "project"
+  ],
+  "homepage": "https://github.com/moyin-pasha-69/project-management-system#readme",
+  "bugs": {
+    "url": "https://github.com/moyin-pasha-69/project-management-system/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moyin-pasha-69/project-management-system.git"
+  },
+  "license": "ISC",
+  "author": "Moyin Pasha",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "mt": "node index.js"
+  },
+  "devDependencies": {
+    "prettier": "3.9.9"
+  }
+}
