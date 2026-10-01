@@ -1,20 +1,16 @@
+import dns from "dns";
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
 import dotenv from "dotenv";
-import express from "express";
+import app from "./app.js";
+import connectDB from "./db/connectingDB.js";
 dotenv.config({
   path: "./.env",
 });
 
-const app = express();
 const port = process.env.PORT || 3000;
 
-app.get("/", (req, res) => {
-  res.send("Hello Bro!");
-});
-
-app.get("/mt", (req, res) => {
-  res.send("Hello Bhai!");
-});
-
-app.listen(port, () => {
-  console.log(`we are on http://localhost:${port}`);
+connectDB().then(() => {
+  app.listen(port, () => {
+    console.log(`we are on http://localhost:${port}`);
+  });
 });
